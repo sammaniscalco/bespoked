@@ -1,0 +1,26 @@
+[
+    {
+       "id": 1,
+       "firstName":"John",
+       "lastName":"Smith",
+       "address":"123 Main st, Woodstock, GA 12345",
+       "phone":"555-123-4567",
+       "startDate":"2019-10-01"
+    },
+    {
+       "id": 2,
+       "firstName":"Jane",
+       "lastName":"Doe",
+       "address":"456 Second rd, Alpharetta, GA 12345",
+       "phone":"777-123-4567",
+       "startDate":"2019-10-01"
+    },
+    {
+       "id": 3,
+       "firstName":"Tim",
+       "lastName":"Walker",
+       "address":"789 Third blvd, Atalnta, GA 12345",
+       "phone":"123-123-1234",
+       "startDate":"2019-10-01"
+    }
+]

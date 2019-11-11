@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "product": "Mongoose Excusrion",
+        "customer": "John Smith",
+        "salesDate": "2019-11-01",
+        "price": "",
+        "salesperson": "Mark Kennedy",
+        "commission": ""
+    },
+    {
+        "id": 2,
+        "product": "Roadmaster Granite Peak",
+        "customer": "Jane Doe",
+        "salesDate": "2019-11-02",
+        "price": "",
+        "salesperson": "Susan Flaws",
+        "commission": ""
+    },
+    {
+        "id": 3,
+        "product": "Huffy Rockit Boys",
+        "customer": "Tim Walker",
+        "salesDate": "2019-11-03",
+        "price": "",
+        "salesperson": "Jim Conrad",
+        "commission": ""
+    },
+    {
+        "id": 4,
+        "product": "Huffy Disney Frozen",
+        "customer": "John Smith",
+        "salesDate": "2019-11-04",
+        "price": "",
+        "salesperson": "Mark Kennedy",
+        "commission": ""
+    },
+    {
+        "id": 5,
+        "product": "Schwinn Sidewinder",
+        "customer": "Jane Doe",
+        "salesDate": "2019-11-05",
+        "price": "",
+        "salesperson": "Susan Flaws",
+        "commission": ""
+    },
+    {
+        "id": 6,
+        "product": "Sixthreezero Around The Block",
+        "customer": "Tim Walker",
+        "salesDate": "2019-11-06",
+        "price": "",
+        "salesperson": "Jim Conrad",
+        "commission": ""
+    }
+]

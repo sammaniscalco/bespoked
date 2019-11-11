@@ -1,0 +1,31 @@
+a.active{
+    text-decoration: underline;
+}
+
+.card {
+margin-bottom:1em;
+}
+.card-header{
+    font-weight:bold;
+}
+
+.card-wrapper > a .card-body {
+    color: black;
+  }
+
+  .card-wrapper > a > .card:hover {
+    border-color: rgba(0, 0, 0, 0.375);
+  }
+
+  .card-wrapper > a > .card:hover .card-header {
+    background-color:rgba(0, 0, 0, 0.09);
+  }
+
+  .card-wrapper >  a:hover  {
+    text-decoration: none;
+}
+
+.th-min
+{
+    width:1%;
+}

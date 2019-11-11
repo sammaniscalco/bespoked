@@ -1,0 +1,62 @@
+[
+    {
+        "salesPerson": "Mark Kennedy",
+        "quarter": "1",
+        "commission": "1011.01"
+    },
+    {
+        "salesPerson": "Susan Flaws",
+        "quarter": "1",
+        "commission": "1012.02"
+    },
+    {
+        "salesPerson": "Jim Conrad",
+        "quarter": "1",
+        "commission": "1013.03"
+    },
+    {
+        "salesPerson": "Mark Kennedy",
+        "quarter": "2",
+        "commission": "1021.01"
+    },
+    {
+        "salesPerson": "Susan Flaws",
+        "quarter": "2",
+        "commission": "1022.02"
+    },
+    {
+        "salesPerson": "Jim Conrad",
+        "quarter": "2",
+        "commission": "1023.03"
+    },
+    {
+        "salesPerson": "Mark Kennedy",
+        "quarter": "3",
+        "commission": "1031.01"
+    },
+    {
+        "salesPerson": "Susan Flaws",
+        "quarter": "3",
+        "commission": "1032.02"
+    },
+    {
+        "salesPerson": "Jim Conrad",
+        "quarter": "3",
+        "commission": "1033.03"
+    },
+    {
+        "salesPerson": "Mark Kennedy",
+        "quarter": "4",
+        "commission": "841.01"
+    },
+    {
+        "salesPerson": "Susan Flaws",
+        "quarter": "4",
+        "commission": "842.02"
+    },
+    {
+        "salesPerson": "Jim Conrad",
+        "quarter": "4",
+        "commission": "843.03"
+    }
+]

@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "name": "Mongoose Excusrion",
+        "style": "Mountain",
+        "manufacturer": "Mongoose",
+        "quantityOnHand": 5,
+        "purchasePrice": 100,
+        "salePrice": 150,
+        "commissionPercentage":0.05
+    },
+    {
+        "id": 2,
+        "name": "Roadmaster Granite Peak",
+        "style": "Mountain",
+        "manufacturer": "Roadmaster",
+        "quantityOnHand": 4,
+        "purchasePrice": 90,
+        "salePrice": 140,
+        "commissionPercentage":0.06
+    },
+    {
+        "id": 3,
+        "name": "Huffy Rockit Boys",
+        "style": "Kids",
+        "manufacturer": "Huffy",
+        "quantityOnHand": 15,
+        "purchasePrice": 80,
+        "salePrice": 100,
+        "commissionPercentage":0.04
+    },
+    {
+        "id": 4,
+        "name": "Huffy Disney Frozen",
+        "style": "Kids",
+        "manufacturer": "Huffy",
+        "quantityOnHand": 8,
+        "purchasePrice": 70,
+        "salePrice": 130,
+        "commissionPercentage":0.03
+    },
+    {
+        "id": 5,
+        "name": "Schwinn Sidewinder",
+        "style": "Kids",
+        "manufacturer": "Schwinn",
+        "quantityOnHand": 6,
+        "purchasePrice": 75,
+        "salePrice": 110,
+        "commissionPercentage":0.02
+    },
+    {
+        "id": 6,
+        "name": "Sixthreezero Around The Block",
+        "style": "Cruiser",
+        "manufacturer": "Sixthreezero",
+        "quantityOnHand": 9,
+        "purchasePrice": 86,
+        "salePrice": 120,
+        "commissionPercentage":0.05
+    }
+]

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.352
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BeSpoked.API", "BeSpoked.API\BeSpoked.API.csproj", "{FACE0D62-D707-426F-A213-6B36188AF0FB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BeSpoked.Repo", "BeSpoked.Repo\BeSpoked.Repo.csproj", "{9F0D591C-42C6-47C4-9072-9760DA075F95}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FACE0D62-D707-426F-A213-6B36188AF0FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FACE0D62-D707-426F-A213-6B36188AF0FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FACE0D62-D707-426F-A213-6B36188AF0FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FACE0D62-D707-426F-A213-6B36188AF0FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F0D591C-42C6-47C4-9072-9760DA075F95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F0D591C-42C6-47C4-9072-9760DA075F95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F0D591C-42C6-47C4-9072-9760DA075F95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F0D591C-42C6-47C4-9072-9760DA075F95}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {519690A6-E001-4FC8-846B-68AF5763C87A}
+	EndGlobalSection
+EndGlobal
