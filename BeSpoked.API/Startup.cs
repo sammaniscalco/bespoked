@@ -31,7 +31,8 @@ namespace BeSpoked.API
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             //set up context for DI
-            services.AddDbContext<BeSpokedContext>(opt => opt.UseInMemoryDatabase("BeSpoked-db3"));
+            services.AddDbContext<BeSpokedContext>(opt => opt.UseInMemoryDatabase("BeSpoked"));
+
             //setup repositories for DI
             services.AddTransient<BaseRepository<Customer>>()
                 .AddTransient<BaseRepository<Discount>>()
@@ -39,7 +40,7 @@ namespace BeSpoked.API
                 .AddTransient<BaseRepository<Sale>>()
                 .AddTransient<BaseRepository<Salesperson>>()
                 .AddTransient<SaleRepository>()
-                .AddTransient<ReportRepository>();
+                .AddTransient<BeSpokedRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

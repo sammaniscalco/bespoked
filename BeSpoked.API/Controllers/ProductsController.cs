@@ -52,35 +52,55 @@ namespace BeSpoked.API.Controllers
                 return BadRequest();
             }
 
-            _repository.Update(product);
+            //check if another product name and manufacturer already exists
+            var items = _repository.Filter(x => x.Id != product.Id && x.Manufacturer == product.Manufacturer && x.Name == product.Name);
 
-            try
+            //doesnt exist so add
+            if (items == null || (items != null && items.Count() == 0))
             {
-                await _repository.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!_repository.Exists(id))
+                _repository.Update(product);
+
+                try
                 {
-                    return NotFound();
+                    await _repository.SaveChangesAsync();
                 }
-                else
+                catch (DbUpdateConcurrencyException)
                 {
-                    throw;
+                    if (!_repository.Exists(id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
                 }
+
+                return NoContent();
             }
 
-            return NoContent();
+            //already exists
+            return BadRequest("Product with Name and Manufacturer already exists");
         }
 
         // POST: api/Products
         [HttpPost]
         public async Task<ActionResult<Product>> PostProduct(Product product)
         {
-            _repository.Add(product);
-            await _repository.SaveChangesAsync();
+            //check if product name and manufacturer already exists
+            var items = _repository.Filter(x => x.Manufacturer == product.Manufacturer && x.Name == product.Name);
 
-            return CreatedAtAction("GetProduct", new { id = product.Id }, product);
+            //doesnt exist so add
+            if (items == null || (items != null && items.Count() == 0))
+            {
+                _repository.Add(product);
+                await _repository.SaveChangesAsync();
+
+                return CreatedAtAction("GetProduct", new { id = product.Id }, product);
+            }
+
+            //already exists
+            return BadRequest("Product with Name and Manufacturer already exists");
         }
 
         // DELETE: api/Products/5

@@ -23,8 +23,11 @@ namespace BeSpoked.API
             //Seed BeSpoked Entities
             using (var scope = host.Services.CreateScope())
             {
+                //get context from service provider
                 var serviceProvider = scope.ServiceProvider;
                 var context = serviceProvider.GetRequiredService<BeSpokedContext>();
+
+                //initialize bespoked db from seed data
                 BeSpokedExtensions.Initialize(context);
             }
 

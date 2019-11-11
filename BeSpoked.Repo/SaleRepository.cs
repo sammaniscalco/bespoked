@@ -34,8 +34,8 @@ namespace BeSpoked.Repo
                              Salesperson = $"{sp.FirstName} {sp.LastName}",
                              CustomerId = s.CustomerId,
                              Customer = $"{c.FirstName} {c.LastName}",
-                             Price=p.SalePrice,
-                             Commission= p.SalePrice*p.CommissionPercentage
+                             Price = p.SalePrice,
+                             Commission = p.SalePrice * p.CommissionPercentage
                          }).Where(predicate);
 
             return items;

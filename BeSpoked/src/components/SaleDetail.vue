@@ -52,12 +52,6 @@ import axios from "axios";
 
 export default {
   name: "SaleDetail",
-  props: {
-    id: {
-      type: Number,
-      default: null
-    }
-  },
   data() {
     return {
       item: {},
@@ -79,7 +73,7 @@ export default {
   methods: {
     submitForm(event) {
       axios
-        .post("/sales/" + this.id, this.item)
+        .post("/sales", this.item)
         .then(response => {
           this.alertVisible = true;
           this.alertType = "alert-success";

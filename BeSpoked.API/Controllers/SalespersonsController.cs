@@ -51,35 +51,55 @@ namespace BeSpoked.API.Controllers
                 return BadRequest();
             }
 
-            _repository.Update(salesperson);
+            //check if another product name and manufacturer already exists
+            var items = _repository.Filter(x => x.Id != salesperson.Id && x.FirstName == salesperson.FirstName && x.LastName == salesperson.LastName && x.Address == salesperson.Address);
 
-            try
+            //doesnt exist so add
+            if (items == null || (items != null && items.Count() == 0))
             {
-                await _repository.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!_repository.Exists(id))
+                _repository.Update(salesperson);
+
+                try
                 {
-                    return NotFound();
+                    await _repository.SaveChangesAsync();
                 }
-                else
+                catch (DbUpdateConcurrencyException)
                 {
-                    throw;
+                    if (!_repository.Exists(id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
                 }
+
+                return NoContent();
             }
 
-            return NoContent();
+            //already exists
+            return BadRequest("Ssalesperson with Name and Address already exists");
         }
 
         // POST: api/Salespersons
         [HttpPost]
         public async Task<ActionResult<Salesperson>> PostSalesperson(Salesperson salesperson)
         {
-            _repository.Add(salesperson);
-            await _repository.SaveChangesAsync();
+            //check if another product name and manufacturer already exists
+            var items = _repository.Filter(x => x.Id != salesperson.Id && x.FirstName == salesperson.FirstName && x.LastName == salesperson.LastName && x.Address == salesperson.Address);
 
-            return CreatedAtAction("GetSalesperson", new { id = salesperson.Id }, salesperson);
+            //doesnt exist so add
+            if (items == null || (items != null && items.Count() == 0))
+            {
+                _repository.Add(salesperson);
+                await _repository.SaveChangesAsync();
+
+                return CreatedAtAction("GetSalesperson", new { id = salesperson.Id }, salesperson);
+            }
+
+            //already exists
+            return BadRequest("Salesperson with Name and Address already exists");
         }
 
         // DELETE: api/Salespersons/5

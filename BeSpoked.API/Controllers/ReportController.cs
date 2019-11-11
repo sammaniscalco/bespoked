@@ -14,9 +14,9 @@ namespace BeSpoked.API.Controllers
     [ApiController]
     public class ReportController : ControllerBase
     {
-        private readonly ReportRepository _repository;
+        private readonly BeSpokedRepository _repository;
 
-        public ReportController(ReportRepository repository)
+        public ReportController(BeSpokedRepository repository)
         {
             _repository = repository;
         }
@@ -25,7 +25,7 @@ namespace BeSpoked.API.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<CommissionReport>> GetReport()
         {
-            var items=_repository.GetReport();
+            var items=_repository.GetCommissionReport();
 
             if(items!=null && items.Count()>0)
             {
